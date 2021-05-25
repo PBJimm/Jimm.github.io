@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            display: grid;
+            grid-template-rows: 10vh 80vh 10vh;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas: 
+            "label1 label1"
+            "label2 label3"
+            "label2 label4";
+            }
+            header, aside{
+                background-color: DarkSlateGrey;
+            }
+            main, footer{
+                background-color: Firebrick;
+            }
+            aside{
+                text-align: center;
+
+            }
+            footer{
+                color: white;
+                font-size: 1em;
+                text-align: center;
+            }
+            
+
+            
+    </style>
+</head>
+<body>
+    <header style="grid-area: label1"></header>
+    <aside style="grid-area: label2">
+    </aside>
+    <main style="grid-area: label3"></main>
+    <footer style="grid-area: label4">@Copyright Jimm | Amira</footer>
+
+</body>
+</html>
