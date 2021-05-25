@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+        body {
+            display: grid;
+            grid-template-rows: 19vh 66vh 15vh;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas: 
+            "label1 label1"
+            "label2 label3"
+            "label2 label4";
+            }
+            header, aside{
+            	background-color: DarkSlateGrey;
+            }
+            main, footer{
+            	background-color: Firebrick;
+            }
+            .asidebutton {
+            	width: 200px;
+            	height: 170px;
+
+
+            }
+
+            
+    </style>
+</head>
+<body>
+	<header style="grid-area: label1"></header>
+    <aside style="grid-area: label2">
+    	<div id="buttoncontainer1">
+				<button type="button" class="asidebutton">
+					<h1>Home</h1>
+				</button>
+		</div>
+    	<div id="buttoncontainer2">
+				<button type="button" class="asidebutton">
+					<h1>Design Now!</h1>
+				</button>
+		</div>
+		<div id="buttoncontainer3">
+				<button type="button" class="asidebutton">
+					<h1>About</h1>
+				</button>
+		</div>
+    </aside>
+    <main style="grid-area: label3">
+    	<div>
+    		<div id="welcomebox">Welcome To Our Card Maker Generator!</div>
+    		<p>It is an honour to have you here using our website to generate your cards. Here we can have you create three different types of cards which is Formal, Informal and Corporate. We hope that you can utilise this generator at your convienience. Once again thank you so much for using our card maker generator. Peace!</p>
+    		<p>Adalah suatu kehormatan kerana anda di sini menggunakan laman web kami untuk menghasilkan kad anda. Di sini, kami dapat meminta anda membuat tiga jenis kad yang berbeza iaitu Formal, Tidak Formal dan Korporat. Kami berharap anda dapat menggunakan penjana ini mengikut kehendak anda. Sekali lagi terima kasih anda sangat banyak kerana menggunakan penjana pembuat kad kami.</p>
+    		<p>荣幸地邀请您在这里使用我们的网站来生成您的名片，在这里我们可以创建三种不同类型的名片，即正式，非正式和公司名片。我们希望您可以在方便的情况下使用此生成器。您使用我们的制卡机生成器真是太好了！</p>
+    	</div>
+
+	</main>
+    <footer style="grid-area: label4">@Copyright Jimm | Amira</footer>
+
+</body>
+</html>
