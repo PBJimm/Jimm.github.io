@@ -31,13 +31,85 @@
 
             
     </style>
+    
 </head>
 <body>
     <header style="grid-area: label1"></header>
     <aside style="grid-area: label2">
+        <div>
+                <div>
+                <label for="name">Enter Fullname</label><br>
+                <input type="text" name="" id="name" placeholder="Your Name"><br>
+                </div>
+
+                <div>
+                <label for="address">Enter Address</label><br>
+                <textarea cols="30" rows="5" placeholder="Valid Address" id="address"></textarea><br>
+                </div>
+
+                <div>
+                <label for="date">Enter Date</label><br>
+                <input type="date" name="" id="date" placeholder="Today's Date"><br>
+                </div>
+                
+                <div>
+                <label for="greetings">Greetings Here!</label><br>
+                <textarea cols="30" rows="5" placeholder="Enter your greetings!" id="greetings"></textarea>
+                </div>
+
+                <div id="sal">
+                    <button onclick="save();">Save</button>
+                    <button onclick="save();">Load</button>b
+                </div>
+        </div>
     </aside>
     <main style="grid-area: label3"></main>
     <footer style="grid-area: label4">@Copyright Jimm | Amira</footer>
 
 </body>
 </html>
+<script type="text/javascript">
+
+    function save () {
+
+    var name = document.getElementById("name");
+    var address = document.getElementById("address");
+    var date = document.getElementById("date");
+    var greetings = document.getElementById("greetings");
+
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("address", address.value);
+    localStorage.setItem("date", date.value);
+    localStorage.setItem("greetings", greetings.value);
+
+    }
+
+    function load() {
+
+    var name = document.getElementById("name");
+    var address = document.getElementById("address");
+    var date = document.getElementById("date");
+    var greetings = document.getElementById("greetings");
+
+    name.value = localStorage.getItem("name");
+    address.value = localStorage.getItem("address");
+    date.value = localStorage.getItem("date");
+    greetings.value = localStorage.getItem("greetings");
+
+    }
+
+    function fillin() {
+
+    var name = document.getElementById("name");
+    var address = document.getElementById("address");
+    var date = document.getElementById("date");
+    var greetings = document.getElementById("greetings");
+
+    name.innerHTML = localStorage.getItem("name");
+    address.innerHTML = localStorage.getItem("address");
+    date.innerHTML = localStorage.getItem("date");
+    greetings.innerHTML = localStorage.getItem("greetings");
+
+    }
+        
+</script>
