@@ -27,9 +27,47 @@
                 font-size: 1em;
                 text-align: center;
             }
-            
 
-            
+            #colorcon {
+    margin: auto;
+    height: 10px;
+    display: grid;
+    grid-template-rows: 10px;
+    grid-template-columns: 20px 20px 20px 20px 20px 20px 20px;
+    grid-template-areas: 
+    "r o y g b i v";
+    grid-column-gap: 10px;
+    padding-bottom: 1em;
+}
+#r {
+  background-color: red;
+  grid-area: r;
+}
+#o {
+  background-color: orange;
+  grid-area: o;
+}
+#y {
+  background-color: yellow;
+  grid-area: y;
+}
+#g {
+  background-color: green;
+  grid-area: g;
+}
+#b {
+  background-color: blue;
+  grid-area: b;
+}
+#i {
+  background-color: indigo;
+  grid-area: i;
+}
+#v {
+  background-color: violet;
+  grid-area: v;
+}
+                     
     </style>
     
 </head>
@@ -57,10 +95,22 @@
                 <textarea cols="30" rows="5" placeholder="Enter your greetings!" id="greetings"></textarea>
                 </div>
 
+                <div id="colorcon">
+                    <div class="color" id="r" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="o" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="y" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="g" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="b" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="i" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="color" id="v" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+
                 <div id="sal">
                     <button onclick="save();">Save</button>
-                    <button onclick="save();">Load</button>b
+                    <button onclick="save();">Load</button>
                 </div>
+
+                
         </div>
     </aside>
     <main style="grid-area: label3"></main>
@@ -111,5 +161,51 @@
     greetings.innerHTML = localStorage.getItem("greetings");
 
     }
+
+    function allowDrop(ev)
+        {
+        ev.preventDefault();
+        }
+
+        function drag(ev)
+        {
+        ev.dataTransfer.setData("Text",ev.target.id);
+        }
+
+        function drop (ev) {
+
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+
+            if(document.getElementById(data).id == 'r'){   
+            document.getElementById('ecardcan').style.backgroundColor = "red";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'o'){   
+            document.getElementById('ecardcan').style.backgroundColor = "orange";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'y'){   
+            document.getElementById('ecardcan').style.backgroundColor = "yellow";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'g'){   
+            document.getElementById('ecardcan').style.backgroundColor = "green";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'b'){   
+            document.getElementById('ecardcan').style.backgroundColor = "blue";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'i'){   
+            document.getElementById('ecardcan').style.backgroundColor = "indigo";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+            else if(document.getElementById(data).id == 'v'){   
+            document.getElementById('ecardcan').style.backgroundColor = "violet";
+            document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
+            }
+        }
+
         
 </script>
