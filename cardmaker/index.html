@@ -1,95 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Welcome!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slides.css">
 	<style type="text/css">
-        body {
-            display: grid;
-            grid-template-rows: 19vh 66vh 15vh;
-            grid-template-columns: 200px 1fr;
-            grid-template-areas: 
-            "label1 label1"
-            "label2 label3"
-            "label2 label4";
-            }
-            header, aside{
-            	background-color: DarkSlateGrey;
-            }
-            main, footer{
-            	background-color: Firebrick;
-            }
-            aside{
-            	text-align: center;
+		main {
+			background-color: #ffffff;
+			border-radius: 30px;
+		}
+		#buttoncontainer {
+			padding-top: 3em;
+			text-align: center;
+		}
+		#button1 {
+			background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+			height: 3em;
+			width: 10%;
+			border-radius: 14px;
+			color: snow;
+			padding-top: 0.1em;
+		}
+		#button1:hover {
+			background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+			height: 3.2em;
+			width: 12%;
+		}
 
-            }
-            footer{
-            	color: white;
-            	font-size: 1em;
-            	text-align: center;
-            }
-            .asidebutton {
-            	width: 180px;
-            	height: 170px;
-            	background-color: LightGrey;
-            	padding: 16px;
+		@media screen and (max-width: 600px) {
+			.mySlides img {
+ 				width: 100%;
+ 			}
+ 			#button1 {
+ 				width: 24%;
+ 			}
+ 			#button1:hover {
+ 				width: 26%;
+ 			}
 
 
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="assets/css/menucss.css">
 
-
-            }
-            #welcomebox{
-            	color: white;
-            	font-size: 1.3em;
-            	padding:16px;
-
-            }
-            
-            .welcometext{
-
-            	color: white;
-            	font-size: 1.3em;
-            	border: solid 1px;
-            	
-
-            }
-            #bwt {
-            	padding :16px;
-            }
-
-            
-    </style>
 </head>
 <body>
-	<header style="grid-area: label1"></header>
-    <aside style="grid-area: label2">
-    	<div id="buttoncontainer1">
-				<button type="button" class="asidebutton" >
-					<h1><a href="index.html">Home</a></h1>
-				</button>
+	<header>
+		<img src="assets/images/logo.png"> <!-- change logo -->
+	</header>
+	<nav>
+		<!-- Top Navigation - for navigating the page -->
+		<a href="" id="home">Home</a> <!-- go to home -->
+		<a href="e-card.html"  id="ecard">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html"  id="about">About</a> <!-- About the team and e-card -->
+		<div id="menucon">
+		<img src="assets/images/menu.png" onclick="menu()" id="menuimg">
 		</div>
-    	<div id="buttoncontainer2">
-				<button type="button" class="asidebutton" >
-					<h1><a href="design.html">Design Now</a></h1>
-				</button>
+	</nav>
+	<main>
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 4</div>
+		  <img src="assets/images/welcome.jpg" class="imgassets">
+		  <div class="text">Welcome! Introductions</div>
 		</div>
-		<div id="buttoncontainer3">
-				<button type="button" class="asidebutton">
-					<h1><a href="about.html">About</a></h1>
-				</button>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 4</div>
+		  <img src="assets/images/slide_1.jpg" class="imgassets">
+		  <div class="text">Informal</div>
 		</div>
-    </aside>
-    <main style="grid-area: label3">
-    	<div>
-    		<div  id="welcomebox">Welcome To Our Card Maker Generator!</div>
-    	</div>
-    	<div id="bwt">
-    		<p class="welcometext">It is an honour to have you here using our website to generate your cards. Here we can have you create three different types of cards which is Formal, Informal and Corporate. We hope that you can utilise this generator at your convienience. Once again thank you so much for using our card maker generator. Peace!</p>
-    		<p class="welcometext">Adalah suatu kehormatan kerana anda di sini menggunakan laman web kami untuk menghasilkan kad anda. Di sini, kami dapat meminta anda membuat tiga jenis kad yang berbeza iaitu Formal, Tidak Formal dan Korporat. Kami berharap anda dapat menggunakan penjana ini mengikut kehendak anda. Sekali lagi terima kasih anda sangat banyak kerana menggunakan penjana pembuat kad kami.</p>
-    		<p class="welcometext">荣幸地邀请您在这里使用我们的网站来生成您的名片，在这里我们可以创建三种不同类型的名片，即正式，非正式和公司名片。我们希望您可以在方便的情况下使用此生成器。您使用我们的制卡机生成器真是太好了！</p>
-    	</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 4</div>
+		  <img src="assets/images/slide_2.jpg" class="imgassets">
+		  <div class="text">Formal</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">4 / 4</div>
+		  <img src="assets/images/slide_3.jpg" class="imgassets">
+		  <div class="text">Corporate</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="si" onclick="currentSlide(1)"></span> 
+		  <span class="si" onclick="currentSlide(2)"></span> 
+		  <span class="si" onclick="currentSlide(3)"></span> 
+		  <span class="si" onclick="currentSlide(4)"></span> 
+		</div>
+
+		<div id="buttoncontainer">
+			<a href="e-card.html">
+				<button type="button" id="button1">Get Started Now!</button>
+			</a>
+		</div>
 
 	</main>
-    <footer style="grid-area: label4">@Copyright Jimm | Amira</footer>
+	
+	<footer>
+		<!-- @Copyright Ching Chong Ling LOng -->
+		@Copyright Alif | Jimm | Amira
+	</footer>
+
+	<script src="assets/js/slides.js"></script>
+	<script src="assets/js/menufunc.js"></script>
+
 
 </body>
 </html>

@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <style type="text/css">
-        body {
-            display: grid;
-            grid-template-rows: 19vh 10vh 62vh 9vh ;
-            grid-template-columns: 200px 1fr;
-            grid-template-areas: 
-            "label1 label1"
-            "label2 label2"
-            "label3 label3"
-            "label4 label4";
-            }
-            header{
-                background-color: DarkSlateGrey;
-            }
-            nav{
-                background-color: LightGrey;
-            }
-            main{
-                background-color: Firebrick;
-            }
-            }
-
-            footer{
-                color: white;
-                font-size: 1em;
-                text-align: center;
-            }
-            #navdir2{
-               text-align: center;    
-            }
-            .navdir{
-                font-weight: bolder;
-                font-size: 2em;
-                color: black;
-            }
-    </style>
+	<title>Welcome!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/menucss.css">
+	<style type="text/css">
+		main {
+			background-color: #84CEEB;
+			border-radius: 30px;
+			text-align: center;
+		}
+		#aboutcontainer {
+			color: black;
+		}
+		h1 {
+			
+		}
+	</style>
 </head>
 <body>
-    <header style="grid-area: label1"></header>
-    <nav style="grid-area: label2" id="navdir2">
-        <a href="index.html" class="navdir">Home</a>
-        <a href="design.html" class="navdir">Design Now!</a>
-        <a href="about.html" class="navdir">About</a>
-    </nav>
-    <main style="grid-area: label3">
-        <p>
-        THANK YOU SO MUCH FOR USING OUR SERVICES, WE ARE LOOKING FORWARD TO WORK WITH YOU AGAIN
-        </p>
-        <span>
-        	Contact details | E mail : cardmakerbn@email.com | Phone number : +9028798698778
-        </span>
-    </main>
-    <footer style="grid-area: label4">@Copyright Jimm | Amira</footer>
+	<header>
+		<img src="assets/images/logo.png"> <!-- change logo -->
+	</header>
+	<nav>
+		<!-- Top Navigation - for navigating the page -->
+		<a href="" id="home">Home</a> <!-- go to home -->
+		<a href="e-card.html"  id="ecard">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html"  id="about">About</a> <!-- About the team and e-card -->
+		<div id="menucon">
+		<img src="assets/images/menu.png" onclick="menu()" id="menuimg">
+		</div>
+	</nav>
+	<main>
+		<div>
+			<h1>ABOUT US</h1>
+			<div id="aboutcontainer">
+				The site was a project for our school assignment, We are to make a card invitation site where a certain objective was set.
+			</div>
+		</div>
+	</main>
+	<footer>
+		<!-- @Copyright Ching Chong Ling LOng -->
+		@Copyright Alif | Jimm | Amira
+	</footer>
+
+	<script src="assets/js/menufunc.js"></script>
 
 </body>
 </html>
