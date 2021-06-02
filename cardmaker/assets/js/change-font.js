@@ -1,5 +1,5 @@
 function font(value){
-	var dmside = document.getElementById("dmside");
+	var dmside = document.getElementById("canvas");
 	if (value == 1){
 		document.getElementById("name").style.fontFamily="Trade Winds";
 		document.getElementById("address").style.fontFamily="Trade Winds";
