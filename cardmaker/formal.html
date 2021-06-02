@@ -6,11 +6,13 @@ b<!DOCTYPE html>
 	
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/itoc.css">
 	<style type="text/css">
 	</style>
 
 	<script src="assets/js/textecard.js"></script>
 	<script src="assets/js/dndf_formal.js"></script>
+	<script src="assets/js/jitoc.js"></script>
 	<script type="text/javascript">
 		
 	</script>
@@ -42,22 +44,22 @@ b<!DOCTYPE html>
 				<div id="cardtype">Formal</div>
 				<div>
 				<label for="name">Enter Fullname</label><br>
-				<input type="text" name="" id="name" placeholder="Your Name"><br>
+				<input type="text" name="" id="name" placeholder="Your Name" onkeyup="showHTML()"><br>
 				</div>
 
 				<div>
 				<label for="address">Enter Address</label><br>
-				<textarea cols="30" rows="5" placeholder="Your Address" id="address"></textarea><br>
+				<textarea cols="30" rows="5" placeholder="Your Address" id="address" onkeyup="showHTML()"></textarea><br>
 				</div>
 
 				<div>
 				<label for="date">Enter Date</label><br>
-				<input type="date" name="" id="date" placeholder="Enter Date"><br>
+				<input type="date" name="" id="date" placeholder="Enter Date" onchange="showHTML()"><br>
 				</div>
 				
 				<div>
 			    <label for="greetings">Greetings Here!</label><br>
-				<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
+				<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings" onkeyup="showHTML()"></textarea>
 			    </div>
 			    <div>Background Styling</div>
 
@@ -94,11 +96,18 @@ b<!DOCTYPE html>
 
 		<div id="dmc">
 			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)" width="400" height="500">
-					
 			</canvas>
-			
+			<div id="bigboicon">
+				<div id="pname">Fullname</div>
+				<div id="paddr">Address</div>
+				<div id="pdate">Date of Event</div>
+				<div id="pgreet">greetings</div>
+			</div>
 		</div>
-		<script src="assets/js/writer.js"></script>
+
+		<!-- txtarea1 = document.getElementById('description');
+			viewHtml = document.getElementById('pv-description');
+			viewHtml.innerHTML = txtarea1.value -->
 					
 		
 		
