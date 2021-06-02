@@ -1,7 +1,7 @@
 #pname {
 	text-align: center;
-	position: fixed;
-	top: 40%;
+	position: relative;
+	top: 150px;
 	left: 50%;
 	height: 1em;
 	width: 300px;
@@ -9,24 +9,24 @@
 #paddr {
 	padding-left: 50px;
 	text-align: center;
-	position: fixed;
-	top: 45%;
+	position: relative;
+	top: 180px;
 	left: 50%;
 	height: 3em;
 	width: 200px;
 }
 #pdate {
 	text-align: center;
-	position: fixed;
-	top: 55%;
+	position: relative;
+	top: 240px;
 	left: 50%;
 	height: 1em;
 	width: 300px;
 }
 #pgreet {
 	text-align: center;
-	position: fixed;
-	top: 60%;
+	position: relative;
+	top: 180px;
 	left: 50%;
 	height: 1em;
 	width: 300px;
