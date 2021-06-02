@@ -67,17 +67,17 @@
 
 			    <div>
 			    	<h3>Font</h3><br>
-			    	<label for="Trade Winds">Arial</label>
+			    	<label for="Arial">Arial</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="arial" value="1" style="margin-bottom :5 px; margin-right: 5px;">
-			    	<label for="Rambla">Times New Roman</label>
+			    	<label for="Times New Roman">Times New Roman</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="timesnewroman" value="2" style="margin-bottom :5 px; margin-right: 5px;">
-			    	<label for="Akaya Kanadaka">STLiti</label>
+			    	<label for="STLiti">STLiti</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="stliti" value="3" style="margin-bottom :5 px;"><br>
-			    	<label for="Permanent Packer">Monotype Corsiva</label>
+			    	<label for="Monotype Corsiva">Monotype Corsiva</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="monotypecorsiva" value="4" style="margin-bottom :5 px; margin-right: 5px;">
-			    	<label for="Grand Hotel">Lucida Calligraphy</label>
+			    	<label for="Lucida Calligraphy">Lucida Calligraphy</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="lucidacalligraphy" value="5" style="margin-bottom :5 px; margin-right: 5px;"><br>
-			    	<label for="Arizonia">Castellar</label>
+			    	<label for="Castellar">Castellar</label>
 			    	<input type="radio" name="font" onchange="font(this.value)" id="castellar" value="6" style="margin-bottom :10 px; margin-right: 5px;">
 			    </div>
 
@@ -137,14 +137,15 @@
 		</aside>
 
 		<div id="dmc">
-			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)" width="400" height="500">
-					
-			</canvas>
-			<div id="bigboicon">
-				<div id="pname">Fullname</div>
-				<div id="paddr">Address</div>
-				<div id="pdate">Date of Event</div>
-				<div id="pgreet">greetings</div>
+			<div id="properwrap">
+				<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)" width="400" height="500">
+				</canvas>
+				<div id="bigboicon" width="400" height="500">
+					<div id="pname">Fullname</div>
+					<div id="paddr">Address</div>
+					<div id="pdate">Date of Event</div>
+					<div id="pgreet">greetings</div>
+				</div>
 			</div>
 		</div>
 		<script src="assets/js/writer.js"></script>
