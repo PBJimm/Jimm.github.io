@@ -1,4 +1,4 @@
-bbody {
+body {
 	display: grid;
 	grid-template-rows:  3em 85vh 6vh;
 	grid-template-columns: 15% 10% 25% 25% 25%;
